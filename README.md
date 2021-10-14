@@ -14,7 +14,7 @@
 
 <h2>
   <p>Web Functionality Includes:</p>
-    <p>Shopping from at least 2 vendors, one of them being Pega, and the other being a self made shop using HTML, CSS< and JS.</p>
+    <p>Shopping from at least 2 vendors, one of them being Pega, and the other being a self made shop using HTML, CSS, and JS.</p>
     <p>Recording total expenses of each shopping trip for each client.</p>
     <p>Recording items out of stock or not found.</p>
 </h2>
