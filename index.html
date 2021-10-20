@@ -108,22 +108,26 @@
                 </table>
             </div>
             <div class="col">
-                <h5>Cart</h5>
-                <table class="table" id="cart">
-                    <thead>
-                        <th>Item</th>
-                        <th>Price</th>
-                        <th>Quantity</th>
-                    </thead>
-                    <tbody>
-
-                    </tbody>
-                </table>
-                <button class="btn btn-secondary" onclick="checkout()">Checkout</button>
-            </div>
-        </div>
-
-    </div>
+                <div class="container">
+                    <div class="card" style="width: 20rem;">
+                        <div class="card-body">
+                            <h5 class="card-title">Cart</h5>
+                            <table class="table" id="cart">
+                                <thead>
+                                    <th>Item</th>
+                                    <th>Price</th>
+                                    <th>Quantity</th>
+                                    <th>Total</th>
+                                </thead>
+                                <tbody>
+                                    <tr></tr>
+                                </tbody>
+                            </table>
+                            <p id="empty">No items in cart</p>
+                            <a href="#" class="btn btn-primary" onclick="checkout()">Checkout</a>
+                        </div>
+                    </div>
+                </div>
     <script src="index.js"></script>
 </body>
 
