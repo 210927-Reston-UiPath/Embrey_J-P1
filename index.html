@@ -14,114 +14,106 @@
 </head>
 
 <body>
+    <!--Data that you'll be presenting-->
     <div class="container">
-        <div class="row justify-content-center">
-            <div class="col">
-<!--                 <img class="card-img-top"
-                     src=
-                     alt="Bacon (Sliced)"> -->
-                <h1>Embrey Enterprises</h1>
-            </div>
+        <h1>Embrey Enterprises</h1>
+    </div>
+    <div class="container">
         <div class="row">
-            <div class="col-7">
-                <div class="row">
-                    <div class="col">
-                        <div class="card" style="width: 12rem;">
-                            
-                        <table class="table">
-                        <thead>
-                            <th>Name</th>
-                            <th>Price</th>
-                            <th>Description</th>
-                            <th>Quantity</th>
-                        </thead> -->
-                            <tbody> -->
-                            <img class="card-img-top"
-                            <tr id="Bacon (Sliced)">
-                                <td>Bacon (Sliced)</td>
-                                <td class="price">$5.50</td>
-                                <td>1 box of cereal containing delicious square cinnamon-flavored grain bits.</td>
-                                <td><input type="number" name="" id="" class="form-control quantity"></td>
-                                <td><input type="button" value="Buy" class="btn btn-info" onclick="buy('Bacon (Sliced)')"></td>
-                            </tr>
-                            <tr id="Cinnamon Toast Crunch">
-                                <td>Cinnamon Toast Crunch</td>
-                                <td class="price">$2.50</td>
-                                <td>1 box of cereal containing delicious cinnamon-flavored grain bits.</td>
-                                <td><input type="number" name="" id="" class="form-control quantity"></td>
-                                <td><input type="button" value="Buy" class="btn btn-info" onclick="buy('Cinnamon Toast Crunch')">
-                                </td>
-                            </tr>
-                            <tr id="Dark Side of the Moon (Vinyl)">
-                                <td>Dark Side of the Moon (Vinyl)</td>
-                                <td class="price">$24.99</td>
-                                <td>Vinyl copy of Pink Floyds's Dark Side of the Moon record.</td>
-                                <td><input type="number" name="" id="" class="form-control quantity"></td>
-                                <td><input type="button" value="Buy" class="btn btn-info" onclick="buy('Dark Side of the Moon (Vinyl)')"></td>
-                            </tr>
-                            <tr id="Eggs">
-                                <td>Eggs</td>
-                                <td class="price">$1.60</td>
-                                <td>White Eggs.</td>
-                                <td><input type="number" name="" id="" class="form-control quantity"></td>
-                                <td><input type="button" value="Buy" class="btn btn-info" onclick="buy('Eggs')"></td>
-                            </tr>
-                            <tr id="Fight Club">
-                                <td>Fight Club</td>
-                                <td class="price">$7.00</td>
-                                <td>1999 film directed by David Fincher.</td>
-                                <td><input type="number" name="" id="" class="form-control quantity"></td>
-                                <td><input type="button" value="Buy" class="btn btn-info" onclick="buy('Fight Club')"></td>
-                            </tr>
-                            <tr id="Oculus Quest 2">
-                                <td>Oculus Quest 2</td>
-                                <td class="price">$300.00</td>
-                                <td>High-tech virtual reality system.</td>
-                                <td><input type="number" name="" id="" class="form-control quantity"></td>
-                                <td><input type="button" value="Buy" class="btn btn-info" onclick="buy('Oculus Quest 2')"></td>
-                            </tr>
-                            <tr id="Samsung S9000">
-                                <td>Samsung S9000</td>
-                                <td class="price">$900.00</td>
-                                <td>Electronic phone for performing a wide-range of actions, including calls, gaming, and personal management.</td>
-                                <td><input type="number" name="" id="" class="form-control quantity"></td>
-                                <td><input type="button" value="Buy" class="btn btn-info" onclick="buy('Samsung S9000')"></td>
-                            </tr>
-                            <tr id="Tile Mate">
-                                <td>Tile Mate)</td>
-                                <td class="price">$24.99</td>
-                                <td>Electronic device to track items.</td>
-                                <td><input type="number" name="" id="" class="form-control quantity"></td>
-                                <td><input type="button" value="Buy" class="btn btn-info" onclick="buy('Tile Mate')"></td>
-                            </tr>
-                            <tr id="Zelda: Breath of the Wild">
-                                <td>Zelda: Breath of the Wild</td>
-                                <td class="price">$39.99</td>
-                                <td>Action/adventure-based video game.</td>
-                                <td><input type="number" name="" id="" class="form-control quantity"></td>
-                                <td><input type="button" value="Buy" class="btn btn-info" onclick="buy('Zelda: Breath of the Wild')"></td>
-                            </tr>
-<!--                         </tbody> -->
-                    </table>
-                </div>
-                <div class="col">
-                    <h5>Cart</h5>
-                    <table class="table" id="cart">
-                        <thead>
-                            <th>Item</th>
-                            <th>Price</th>
-                            <th>Quantity</th>
-                        </thead>
-                        <tbody>
-
-                        </tbody>
-                    </table>
-                    <button class="btn btn-secondary" onclick="checkout()">Checkout</button>
-                </div>
+            <div class="col-9">
+                <table class="table">
+                    <thead>
+                        <th>Name</th>
+                        <th>Price</th>
+                        <th>Description</th>
+                        <th>Quantity</th>
+                    </thead>
+                    <tbody>
+                        <tr id="Bacon (Sliced)">
+                            <td>Bacon (Sliced)</td>
+                            <td class="price">$5.50</td>
+                            <td>1 box of cereal containing delicious square cinnamon-flavored grain bits.</td>
+                            <td><input type="number" name="" id="" class="form-control quantity"></td>
+                            <td><input type="button" value="Buy" class="btn btn-info" onclick="buy('Bacon (Sliced)')"></td>
+                        </tr>
+                        <tr id="Cinnamon Toast Crunch">
+                            <td>Cinnamon Toast Crunch</td>
+                            <td class="price">$2.50</td>
+                            <td>1 box of cereal containing delicious cinnamon-flavored grain bits.</td>
+                            <td><input type="number" name="" id="" class="form-control quantity"></td>
+                            <td><input type="button" value="Buy" class="btn btn-info" onclick="buy('Cinnamon Toast Crunch')">
+                            </td>
+                        </tr>
+                        <tr id="Dark Side of the Moon (Vinyl)">
+                            <td>Dark Side of the Moon (Vinyl)</td>
+                            <td class="price">$24.99</td>
+                            <td>Vinyl copy of Pink Floyds's Dark Side of the Moon record.</td>
+                            <td><input type="number" name="" id="" class="form-control quantity"></td>
+                            <td><input type="button" value="Buy" class="btn btn-info" onclick="buy('Dark Side of the Moon (Vinyl)')"></td>
+                        </tr>
+                        <tr id="Eggs">
+                            <td>Eggs</td>
+                            <td class="price">$1.60</td>
+                            <td>White Eggs.</td>
+                            <td><input type="number" name="" id="" class="form-control quantity"></td>
+                            <td><input type="button" value="Buy" class="btn btn-info" onclick="buy('Eggs')"></td>
+                        </tr>
+                        <tr id="Fight Club">
+                            <td>Fight Club</td>
+                            <td class="price">$7.00</td>
+                            <td>1999 film directed by David Fincher.</td>
+                            <td><input type="number" name="" id="" class="form-control quantity"></td>
+                            <td><input type="button" value="Buy" class="btn btn-info" onclick="buy('Fight Club')"></td>
+                        </tr>
+                        <tr id="Oculus Quest 2">
+                            <td>Oculus Quest 2</td>
+                            <td class="price">$300.00</td>
+                            <td>High-tech virtual reality system.</td>
+                            <td><input type="number" name="" id="" class="form-control quantity"></td>
+                            <td><input type="button" value="Buy" class="btn btn-info" onclick="buy('Oculus Quest 2')"></td>
+                        </tr>
+                        <tr id="Samsung S9000">
+                            <td>Samsung S9000</td>
+                            <td class="price">$900.00</td>
+                            <td>Electronic phone for performing a wide-range of actions, including calls, gaming, and personal management.</td>
+                            <td><input type="number" name="" id="" class="form-control quantity"></td>
+                            <td><input type="button" value="Buy" class="btn btn-info" onclick="buy('Samsung S9000')"></td>
+                        </tr>
+                        <tr id="Tile Mate">
+                            <td>Tile Mate)</td>
+                            <td class="price">$24.99</td>
+                            <td>Electronic device to track items.</td>
+                            <td><input type="number" name="" id="" class="form-control quantity"></td>
+                            <td><input type="button" value="Buy" class="btn btn-info" onclick="buy('Tile Mate')"></td>
+                        </tr>
+                        <tr id="Zelda: Breath of the Wild">
+                            <td>Zelda: Breath of the Wild</td>
+                            <td class="price">$39.99</td>
+                            <td>Action/adventure-based video game.</td>
+                            <td><input type="number" name="" id="" class="form-control quantity"></td>
+                            <td><input type="button" value="Buy" class="btn btn-info" onclick="buy('Zelda: Breath of the Wild')"></td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
+            <div class="col">
+                <h5>Cart</h5>
+                <table class="table" id="cart">
+                    <thead>
+                        <th>Item</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                    </thead>
+                    <tbody>
 
+                    </tbody>
+                </table>
+                <button class="btn btn-secondary" onclick="checkout()">Checkout</button>
+            </div>
         </div>
-        <script src="index.js"></script>
-    </body>
+
+    </div>
+    <script src="index.js"></script>
+</body>
 
 </html>
