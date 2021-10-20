@@ -5,8 +5,8 @@ function buy(name) {
     let productName = tableRow.insertCell(0);
     productName.innerHTML = name;
 
-    let price = tableRow.insertCell(1);
-    price.innerHTML = document.querySelector('#' + name.replace(' ', '') + ' .price').innerHTML;
+    let cost = tableRow.insertCell(1);
+    price.innerHTML = document.querySelector('#' + name.replace(' ', '') + ' .cost').innerHTML;
 
     let quantity = tableRow.insertCell(2);
     quantity.innerHTML = document.querySelector('#' + name.replace(' ', '') + ' input').value;
