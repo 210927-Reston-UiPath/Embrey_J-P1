@@ -19,7 +19,7 @@ function buy(name) {
 }
 function checkout()
 {
-    alert("thanks for your patronage!");
+    alert("Thank you for shopping at Embrey Enterprises! Have a wonderful day!");
     document.querySelectorAll("#cart tbody tr").forEach(row => row.remove());
     document.querySelector('#empty').innerHTML = 'No Items in cart';
 }
