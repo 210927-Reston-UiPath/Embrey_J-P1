@@ -1,82 +1,93 @@
+create table clients
+(
+    clientID serial,
+    clientName varchar(255) not null,
+    clientEmail varchar(255) not null,
+    primary key (clientID)
+);
+
+drop table clients cascade;
+
+select * from clients;
+
+-- delete from clients;
+
+
+
+-- CHECK AGAIN v
+create table shoppinglist
+(
+    itemID serial,
+    clientID bigserial,
+    productName varchar(255),
+    primary key(itemID),
+    foreign key(clientID) references clients(clientID)
+);
+
+drop table shoppinglist cascade;
+
+select * from shoppinglist;
+
+
+create table expenses
+(
+    lineitemID serial,
+    subtotal decimal(10, 2),
+    -- orderID not null,
+    primary key(lineitemID)
+);
+
+select * from expenses;
+
+insert into expenses (subtotal) VALUES
+(6.00)
+
+
+drop table expenses cascade;
+
+
+create table orders
+(
+    orderID int not null,
+    clientID int not null,
+    productName varchar(255),
+    total decimal(13, 2) not null,
+    primary key (orderID),
+    foreign key (clientID) references clients(clientID)
+);
+
+select * from orders;
+
+
+drop table orders cascade;
+
+
 create table vendors
 (
-    id serial primary key,
+    vendorID int not null,
     vendorName varchar(100),
     vendorProduct varchar(100),
     vendorCost decimal(10, 2),
-    vendorQuantity numeric(100)
+    vendorQuantity numeric(100),
+    primary key (vendorID)
 );
 
--- drop table
+select vendorCost from vendors;
 
--- insert into vendors (vendorName, vendorProduct, vendorCost, vendorQuantity) values
-
-
-create table EarlyBirdProduce
-(
-    id serial primary key,
-    productName varchar(100),
-    productCost decimal(10, 2),
-    productQuantity numeric(100)
-);
-
-insert into EarlyBirdProduce (productName, productCost, productQuantity) values
-('Eggs', 1.60, 100), ('Sliced Bacon', 5.50, 100), ('Cinnamon Toast Crunch', 2.50, 100); 
-
-select * from EarlyBirdProduce
-
--- DELETE FROM EarlyBirdProduce
--- WHERE id = 4;
-
--- drop table EarlyBirdProduce
+insert into vendors(vendorID, vendorName, vendorProduct, vendorCost, vendorQuantity) VALUES
+(1, 'Pega', 'Steeleye Stout', 18.00, 100), (2, 'Pega', 'Louisiana Fiery Hot Pepper Sauce', 21.06, 100), (3, 'EEFood', 'Bacon', 5.50, 100), (4, 'EEFood', 'Cinnamon Toast Crunch', 2.50, 100), (5, 'EEFood', 'Eggs', 1.60, 100), (6, 'EEEntertainment', 'Dark Side of the Moon Vinyl', 24.99, 100), (7, 'EEEntertainment', 'Fight Club', 7.00, 100), (8, 'EEEntertainment', 'Zelda Breath of the Wild', 39.99, 100), (9, 'EETechnology', 'Oculus Quest 2', 300.00, 100), (10, 'EETechnology', 'Samsung S9000', 900.00, 100), (11, 'EETechnology', 'Tile Mate', 24.99, 100);
 
 
-create table TheEntertainer
-(
-    id serial primary key,
-    productName varchar(100),
-    productCost decimal(10, 2),
-    productQuantity numeric(100)
-);
+drop table vendors cascade;
 
-insert into TheEntertainer (productName, productCost, productQuantity) values
-('Fight Club', 7.00, 100), ('Zelda BOTW', 39.99, 100), ('Dark Side of the Moon Vinyl', 24.99, 100);
+-- create table vendorinventory
+-- (
+--     vendorInvID int not null,
+--     vendorName varchar(255) not null,
+--     vendorItem varchar(255) not null,
+--     vendorCost numeric(3, 2) not null,
+--     primary key (vendorInvID),
+--     foreign key (vendorID) references vendors(vendorID)
+-- );
 
-select * from TheEntertainer
-
--- drop table TheEntertainer
-
-
-create table Technotrocity
-(
-    id serial primary key,
-    productName varchar(100),
-    productCost decimal(10, 2),
-    productQuantity numeric(100)
-);
-
-insert into Technotrocity (productName, productCost, productQuantity) values
-('Samsung S9000', 900.00, 100), ('Tile Mate', 24.99, 100), ('Oculus Quest 2', 300.00, 100);
-
-select * from Technotrocity
-
--- drop table Technotrocity
-
-create table Clients
-(
-    id serial primary key,
-    clientName varchar(100),
-    clientEmail varchar(100),
-    clientOrder varchar(100),
-    clientQuantity numeric(100)
-);
-
-insert into Clients (clientName, clientEmail, clientOrder, clientQuantity) values
-('James Embrey', 'james.embrey@revature.net', 'Tile Mate', 5), ('Semaj Yember', 'semaj.yember@revature.net', 'Fight Club', 1), ('Steve Austin', 'steve.austin@gmail.com', 'Eggs', 12);
-
-select * from Clients
-
-drop table Clients
-
--- DELETE FROM Clients
--- WHERE id = 1;
+-- drop table vendorinventory cascade;
