@@ -68,12 +68,12 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="484,238" sap2010:WorkflowViewState.IdRef="InputDialog_1" IsPassword="False" Label="Hello, I am the new and improved RoSATron 2.0, here to provide even greater assistance with your shopping needs! Select the button below to check for Clients and take purchases" Title="Options">
+    <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="484,238" sap2010:WorkflowViewState.IdRef="InputDialog_1" IsPassword="False" Label="Hello, I am the new and improved RoSATron 2.0, here to provide even greater assistance with your shopping needs! Please leave blank and select OK to check for Clients and purchase their item requests." Title="Options">
       <ui:InputDialog.Result>
         <OutArgument x:TypeArguments="x:String">[userSelect]</OutArgument>
       </ui:InputDialog.Result>
     </ui:InputDialog>
-    <If Condition="[userSelect = &quot;Add Clients and Purchases&quot;]" sap:VirtualizedContainerService.HintSize="484,260" sap2010:WorkflowViewState.IdRef="If_1">
+    <If Condition="[userSelect = &quot;&quot;]" sap:VirtualizedContainerService.HintSize="484,260" sap2010:WorkflowViewState.IdRef="If_1">
       <If.Then>
         <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke ExcelReadClients workflow" sap:VirtualizedContainerService.HintSize="334,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="ExcelReadClients.xaml">
           <ui:InvokeWorkflowFile.Arguments>

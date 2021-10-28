@@ -39,25 +39,21 @@ create table expenses
 
 select * from expenses;
 
-insert into expenses (subtotal) VALUES
-(6.00)
-
-
 drop table expenses cascade;
 
 
 create table orders
 (
-    orderID int not null,
-    clientID int not null,
-    productName varchar(255),
-    total decimal(13, 2) not null,
-    primary key (orderID),
-    foreign key (clientID) references clients(clientID)
+    orderSetID serial,
+    -- clientID int not null,
+    -- productName varchar(255),
+    total decimal(13, 2),
+    -- orderDate DATETIME
+    primary key (orderSetID)
+    -- foreign key (clientID) references clients(clientID)
 );
 
 select * from orders;
-
 
 drop table orders cascade;
 
@@ -72,11 +68,14 @@ create table vendors
     primary key (vendorID)
 );
 
-select vendorCost from vendors;
+select * from vendors;
 
 insert into vendors(vendorID, vendorName, vendorProduct, vendorCost, vendorQuantity) VALUES
-(1, 'Pega', 'Steeleye Stout', 18.00, 100), (2, 'Pega', 'Louisiana Fiery Hot Pepper Sauce', 21.06, 100), (3, 'EEFood', 'Bacon', 5.50, 100), (4, 'EEFood', 'Cinnamon Toast Crunch', 2.50, 100), (5, 'EEFood', 'Eggs', 1.60, 100), (6, 'EEEntertainment', 'Dark Side of the Moon Vinyl', 24.99, 100), (7, 'EEEntertainment', 'Fight Club', 7.00, 100), (8, 'EEEntertainment', 'Zelda Breath of the Wild', 39.99, 100), (9, 'EETechnology', 'Oculus Quest 2', 300.00, 100), (10, 'EETechnology', 'Samsung S9000', 900.00, 100), (11, 'EETechnology', 'Tile Mate', 24.99, 100);
+(1, 'Pega', 'Steeleye Stout', 18.00, 0), (2, 'Pega', 'Louisiana Fiery Hot Pepper Sauce', 21.06, 100), (3, 'EEFood', 'Bacon', 5.50, 100), (4, 'EEFood', 'Cinnamon Toast Crunch', 2.50, 100), (5, 'EEFood', 'Eggs', 1.60, 100), (6, 'EEEntertainment', 'Dark Side of the Moon Vinyl', 24.99, 100), (7, 'EEEntertainment', 'Fight Club', 7.00, 100), (8, 'EEEntertainment', 'Zelda Breath of the Wild', 39.99, 100), (9, 'EETechnology', 'Oculus Quest 2', 300.00, 100), (10, 'EETechnology', 'Samsung S9000', 900.00, 100), (11, 'EETechnology', 'Tile Mate', 24.99, 100);
 
+-- UPDATE vendors SET vendorQuantity = 100 WHERE vendorQuantity = 99;
+
+-- UPDATE vendors SET vendorQuantity = 0 WHERE vendorQuantity = 99 AND vendorProduct = 'Steeleye Stout';
 
 drop table vendors cascade;
 
